@@ -36,13 +36,16 @@
                             <constraint firstAttribute="bottom" secondItem="1WF-jW-TS5" secondAttribute="bottom" id="CYM-a7-5ue"/>
                             <constraint firstAttribute="bottom" secondItem="3WT-FT-Kmq" secondAttribute="bottom" constant="20" symbolic="YES" id="MCR-oe-oUS"/>
                             <constraint firstItem="1WF-jW-TS5" firstAttribute="top" secondItem="P6i-AU-1sX" secondAttribute="top" id="WYk-mO-uJw"/>
-                            <constraint firstItem="1WF-jW-TS5" firstAttribute="trailing" secondItem="H0U-Pp-86T" secondAttribute="trailing" id="bNt-aP-4lE"/>
                             <constraint firstItem="1WF-jW-TS5" firstAttribute="leading" secondItem="3WT-FT-Kmq" secondAttribute="trailing" id="e2p-3A-9Cc"/>
                             <constraint firstItem="3WT-FT-Kmq" firstAttribute="top" secondItem="P6i-AU-1sX" secondAttribute="top" constant="20" symbolic="YES" id="f32-tO-7h9"/>
                             <constraint firstItem="3WT-FT-Kmq" firstAttribute="leading" secondItem="H0U-Pp-86T" secondAttribute="leading" constant="-285" id="mSA-aY-qrQ"/>
+                            <constraint firstItem="1WF-jW-TS5" firstAttribute="width" secondItem="P6i-AU-1sX" secondAttribute="width" id="tsP-fC-CTz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H0U-Pp-86T"/>
                     </view>
+                    <connections>
+                        <outlet property="sideMenuConstraint" destination="mSA-aY-qrQ" id="EoI-tP-89T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcE-7T-U5W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,7 +138,7 @@
         <!--Side Menu-->
         <scene sceneID="4c0-YP-JU7">
             <objects>
-                <viewController id="Khy-hu-Ufi" sceneMemberID="viewController">
+                <viewController id="Khy-hu-Ufi" customClass="MainViewController" customModule="Side_Menu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wSo-GG-r9X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +163,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Side Menu" id="rgJ-fv-KSs">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="kwC-Do-wah"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="kwC-Do-wah">
+                            <connections>
+                                <action selector="sideMenu:" destination="Khy-hu-Ufi" id="paL-Yp-vB2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6A-qO-Bao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
