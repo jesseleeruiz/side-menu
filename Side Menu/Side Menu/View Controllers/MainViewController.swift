@@ -16,7 +16,8 @@ class MainViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func sideMenu(_ sender: UIBarButtonItem) {
-        
+        NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"),
+                                        object: nil)
     }
     
 }
